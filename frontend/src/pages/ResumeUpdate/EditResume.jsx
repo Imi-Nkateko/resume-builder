@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const EditResume = () => {
-  return (
-    <div>EditResume</div>
-  )
-}
+  return <div>EditResume</div>;
+};
 
-export default EditResume
+export default EditResume;
