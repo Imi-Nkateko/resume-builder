@@ -9,19 +9,18 @@ const Login = ({ setCurrentPage }) => {
 
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {};
+  const handleLogin = async (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div>
       <h3>Welcome Back</h3>
       <p>Please enter your details to login</p>
       <form className="max-w-sm mx-auto" onSubmit={handleLogin}>
-       {error && <p>{error}</p>}
+        {error && <p>{error}</p>}
         <div className="mb-5">
-          <label
-            for="email"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
+          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
             Your email
           </label>
           <input
@@ -33,10 +32,7 @@ const Login = ({ setCurrentPage }) => {
           />
         </div>
         <div className="mb-5">
-          <label
-            for="password"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
+          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
             Your password
           </label>
           <input
@@ -56,10 +52,7 @@ const Login = ({ setCurrentPage }) => {
               required
             />
           </div>
-          <label
-            for="remember"
-            className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >
+          <label className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
             Remember me
           </label>
         </div>
@@ -69,7 +62,8 @@ const Login = ({ setCurrentPage }) => {
         >
           LOGIN
         </button>
-        <p>Don't have an account?{""}
+        <p>
+          Don't have an account?{""}
           <button onClick={() => setCurrentPage("signup")}>Signup</button>
         </p>
       </form>
