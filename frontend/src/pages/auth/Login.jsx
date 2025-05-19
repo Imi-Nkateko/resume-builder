@@ -14,10 +14,11 @@ const Login = ({ setCurrentPage }) => {
   };
 
   return (
-    <div>
-      <h3>Welcome Back</h3>
-      <p>Please enter your details to login</p>
-      <form className="max-w-sm mx-auto" onSubmit={handleLogin}>
+    <div className=" mx-auto">
+
+      <form className="max-w-sm mx-auto bg-blue-300" onSubmit={handleLogin}>
+              <h3>Welcome Back</h3>
+
         {error && <p>{error}</p>}
         <div className="mb-5">
           <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
