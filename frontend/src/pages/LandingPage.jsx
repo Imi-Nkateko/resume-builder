@@ -32,6 +32,7 @@ const LandingPage = () => {
         Create Resume
       </button>
 
+      {/* modal to open correct form */}
       <Modal
         isOpen={openAuthModal}
         onChange={() => {
